@@ -1,1 +1,17 @@
-<p>navbar works!</p>
+<section class="NavBar">
+    <nav>
+        <div class="nav-logo">
+            <a href="/">
+                <h1>Games Wiki</h1>
+            </a>
+        </div>
+        <span (click)="btnMobile()" [ngClass]="btnMenu ? 'active': ''"></span>
+        <ul class="nav-links" [ngClass]="btnMenu ? 'active' : ''">
+            <a class="link" routerLink="/">Home</a>
+            <a class="link" routerLink="/about">About</a>
+            <a class="link" routerLink="/gallery">Gallery</a>
+            <a class="link" routerLink="/addReview">Add Review</a>
+        </ul>
+    </nav>
+</section>
+
