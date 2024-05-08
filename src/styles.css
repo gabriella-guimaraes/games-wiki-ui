@@ -6,11 +6,13 @@
     --details-lilac: #b48ef0;
     --details-blue: #0551b6;
     --text-light: #EEE5E8;
+    --text-gray: #b4aaae;
 }
 
 
 html, body { 
     height: 100%;
     background-color: var(--bg-dark);
+    color: var(--text-light);
  }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
