@@ -22,8 +22,8 @@ export class NavbarComponent {
 
   constructor(private router: Router) {}
 
-  ngOnInit(){
-    this.router.navigate(["/"]);
-  }
+  // ngOnInit(){
+  //   this.router.navigate(["/"]);
+  // } // bug: toda vez que a página recarrega esse *abençoado* voltava para a pg inicial
 
 }
