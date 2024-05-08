@@ -1,0 +1,63 @@
+.Content {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    padding: 5rem 8rem;
+    gap: 2rem;
+    /* will-change: transform, opacity; */
+}
+
+.backgroundImg {
+    background-image: url('/assets/8169803.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.divider {
+    width: 3px;
+    height: auto;
+    background-color: var(--text-light);
+}
+
+.intro {
+    font-weight: 800;
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.Container {
+    padding: 2.5rem;
+    z-index: 1;
+}
+
+.github {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.5s;
+}
+
+.github:hover {
+    color: var(--details-lilac);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .divider {
+        display: none;
+    }
+
+    .Content {
+        padding: 2rem 4rem;
+    }
+
+    .Container {
+        padding: 0.4rem;
+    }
+}
