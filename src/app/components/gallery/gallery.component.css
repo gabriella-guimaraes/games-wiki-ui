@@ -1,0 +1,55 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 8rem;
+    height: 70vh;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 72px;
+    margin-bottom: 1rem;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    width: 70vw;
+    gap: 10px;
+    height: 9vh;
+
+}
+
+.form-input {
+    width: 40vw;
+    height: inherit;
+}
+
+.form-input, input {
+    height: inherit;
+}
+
+.search-btn {
+    height: inherit;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        padding: 2rem 5rem;
+    }
+
+    .form-wrapper {
+        width: 90vw;
+        height: 6.3vh;
+    
+    }
+
+    .form-input {
+        width: 70vw;
+    }
+
+}
