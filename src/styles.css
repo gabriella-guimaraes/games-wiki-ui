@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
-    --bg-dark: #1E1A1D;
-    --details-pink: #810081;
-    --details-purple: #5F00C0;
-    --details-lilac: #b48ef0;
-    --details-blue: #0551b6;
-    --text-light: #EEE5E8;
-    --text-gray: #b4aaae;
-}
+/* @import "@angular/material/prebuilt-themes/indigo-pink.css"; */
 
+:root {
+    --bg-dark: #1E1A1D!important;
+    --details-pink: #810081!important;
+    --details-purple: #5F00C0!important;
+    --details-lilac: #b48ef0!important;
+    --details-blue: #0551b6!important;
+    --text-light: #EEE5E8!important;
+    --text-gray: #b4aaae!important;
+}
 
 html, body { 
     height: 100%;
