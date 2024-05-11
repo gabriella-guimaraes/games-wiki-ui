@@ -1,0 +1,22 @@
+.Content {
+    padding: 2rem 1rem;
+    background-color: #eee5e831;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+}
+
+.games-from {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
