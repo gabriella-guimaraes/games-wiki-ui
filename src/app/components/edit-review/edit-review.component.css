@@ -1,0 +1,49 @@
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem 8rem;
+    height: 100vh;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+}
+
+.backgroundImg {
+    background-image: url('/assets/8169803.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 72px;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 50%;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        padding: 2rem 5rem;
+    }
+
+    .Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 48px;
+        max-width: 100%;
+    }
+
+}
