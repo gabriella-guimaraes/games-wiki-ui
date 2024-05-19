@@ -1,40 +1,93 @@
 <main class="Content-Wrapper">
-    <section class="Content">
-        <form class="games-from">
-            <div>
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Title</mat-label>
-                    <input  matInput>
-                </mat-form-field>
+  <section class="Content">
+    <form
+      class="games-from"
+      (ngSubmit)="submit()"
+      [formGroup]="reviewForm"
+      #formDir="ngForm"
+    >
+      <div>
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Title</mat-label>
+          <input
+            formControlName="title"
+            matInput
+            [errorStateMatcher]="matcher"
+          />
+          @if (!reviewForm.hasError('required'))
+          {
+          <mat-error>The review must have a title!</mat-error>
+          } @if (reviewForm.hasError('required')) {
+          <mat-error>Title is <strong>required</strong></mat-error>
+          }
+        </mat-form-field>
 
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Platform</mat-label>
-                    <input  matInput>
-                    <mat-hint align="end">Ex: PC, PS5, Xbox...</mat-hint>
-                </mat-form-field>
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Platform</mat-label>
+          <input
+           matInput
+           formControlName="platform"
+           [errorStateMatcher]="matcher" />
+          <mat-hint align="end">Ex: PC, PS5, Xbox...</mat-hint>
+          @if (platform.hasError('required')){
+            <mat-error>Platform is <strong>required</strong></mat-error>
+          }
+          @if (platform.hasError('minlength')) {
+            <mat-error>Platform must have at least 2 characters</mat-error>
+          }
+        </mat-form-field>
 
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput></textarea>
-                </mat-form-field>
-                
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Favorite Characters</mat-label>
-                    <input  matInput>
-                </mat-form-field>
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Textarea</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+          @if (description.hasError('required')){
+            <mat-error>The description is <strong>required</strong></mat-error>
+          }
+          @if (description.hasError('minlength')) {
+            <mat-error>The description must have at least 10 characters</mat-error>
+          }
+        </mat-form-field>
 
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Ratting</mat-label>
-                    <input  matInput type="number">
-                    <mat-hint align="end">Pick a number between 0 and 100</mat-hint>
-                </mat-form-field>
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Favorite Characters</mat-label>
+          <input matInput formControlName="favorites" />
+          <mat-hint align="end">Enter names separated by commas</mat-hint>
+          @if (favorites.hasError('required')){
+            <mat-error>Add at least one character!</mat-error>
+          }
+        </mat-form-field>
 
-                <mat-form-field appearance="outline" class="form-input">
-                    <mat-label>Poster url</mat-label>
-                    <input  matInput>
-                </mat-form-field>
-            </div>
-            <button class="search-btn" mat-stroked-button color="primary">Add Review</button>
-        </form>
-    </section>
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Ratting</mat-label>
+          <input matInput type="number" formControlName="rating"/>
+          <mat-hint align="end">Pick a number between 0 and 100</mat-hint>
+          @if (rating.hasError('required')){
+            <mat-error>Rating is <strong>required</strong></mat-error>
+          }
+          @if (rating.hasError('min') && rating.hasError('max')) {
+            <mat-error>Rating must be between 0 and 100</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-input">
+          <mat-label>Poster url</mat-label>
+          <input matInput formControlName="image" />
+          @if (image.hasError('required')){
+            <mat-error>The poster url is <strong>required</strong></mat-error>
+          }
+          @if (image.hasError('invalidUrl')) {
+            <mat-error>The url is not valid</mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <button
+        type="submit"
+        class="search-btn"
+        mat-stroked-button
+        color="primary"
+      >
+        Add Review
+      </button>
+    </form>
+  </section>
 </main>
