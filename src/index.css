@@ -1,1 +1,25 @@
+:root {
+  --bg-dark: #010915;
+  --text-light: #e0ecfe;
+  --gray: #68667ec7;
+  --blue: #77aefb;
+  --purple: #a204a5;
+  --pink: #fa308b;
+  --green: #04a554;  
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+body h1 {
+  font-family: "Press Start 2P", system-ui;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
