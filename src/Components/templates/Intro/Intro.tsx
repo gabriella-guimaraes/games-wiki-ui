@@ -2,7 +2,6 @@ import React from 'react';
 import styles from "./Intro.module.css";
 import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import lvl from "../../../assets/level_up.png";
 import galaxy from "../../../assets/milkyway.png"
 import { Link } from 'react-router-dom';
 
