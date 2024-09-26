@@ -1,0 +1,16 @@
+.Title {
+    font-size: 80px;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .Title {
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Title {
+        font-size: 56px;
+    }
+}
