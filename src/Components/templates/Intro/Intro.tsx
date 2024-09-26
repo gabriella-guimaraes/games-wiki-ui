@@ -3,6 +3,7 @@ import styles from "./Intro.module.css";
 import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import lvl from "../../../assets/level_up.png";
+import galaxy from "../../../assets/milkyway.png"
 import { Link } from 'react-router-dom';
 
 function Intro() {
@@ -28,7 +29,7 @@ function Intro() {
                 </Grid>
             </Grid>
             <Grid size={{ xs: 12, md: 5 }} className={styles.imgContainer}>
-                <img src={lvl} alt="Level Up" className={styles.img} />
+                <img src={galaxy} alt="Level Up" className={styles.img} />
             </Grid>
         </Grid>
     </section>
