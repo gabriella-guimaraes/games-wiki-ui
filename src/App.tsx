@@ -1,11 +1,26 @@
 import React from 'react';
 import './App.css';
+import NavBar from './Components/organisms/NavBar/NavBar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Components/pages/home/Home';
+import About from './Components/pages/about/About';
+import Gallery from './Components/pages/gallery/Gallery';
+import AddReview from './Components/pages/addReview/addReview';
+import NotFound from './Components/pages/notFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello There</h1>
-      <span>General Kenobi...</span>
+      <NavBar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/addReview" element={<AddReview />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
