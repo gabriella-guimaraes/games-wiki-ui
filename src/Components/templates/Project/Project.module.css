@@ -1,0 +1,52 @@
+.Project {
+    padding: 2rem 0;
+}
+.content {
+    padding: 5rem;
+}
+
+.title {
+    text-align: left;
+    font-size: 72px;
+}
+
+.img {
+    width: 95%;
+    height: auto;
+    border-right: 1px solid var(--gray);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--gray);
+}
+
+@media (max-width: 900px) {
+    .Project {
+        padding: 0;
+    }
+    .img {
+        border-right: none;
+    }
+
+    .content {
+        background-image: url("../../../assets/nintendo.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    .text {
+        background-color: #010915b0;
+        border-radius: 15px;
+        backdrop-filter: blur(15px); /* Efeito de desfoque */
+        -webkit-backdrop-filter: blur(15px); /* Suporte para Webkit */
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .content {
+        padding: 2rem;
+    }
+}
