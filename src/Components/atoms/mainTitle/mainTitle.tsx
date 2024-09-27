@@ -3,12 +3,13 @@ import styles from "./mainTitle.module.css";
 
 interface MainTitleProps {
     text: string;
-    gradient?: boolean
+    smaller?: boolean
 }
 
-function MainTitle({text, gradient = false} : MainTitleProps) {
+function MainTitle({text, smaller = false} : MainTitleProps) {
+  const className = `${styles.Title} ${smaller ? styles.Smaller : ''}`;
   return (
-    <h1 className={styles.Title}>{text}</h1>
+    <h1 className={className}>{text}</h1>
   )
 }
 

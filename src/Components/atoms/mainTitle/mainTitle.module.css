@@ -3,14 +3,27 @@
     text-align: center;
 }
 
+.Smaller {
+    font-size: 72px;
+    text-align: center;
+}
+
 @media (max-width: 1000px) {
     .Title {
         font-size: 72px;
+    }
+
+    .Smaller {
+        font-size: 56px;
     }
 }
 
 @media (max-width: 800px) {
     .Title {
+        font-size: 56px;
+    }
+
+    .Smaller {
         font-size: 56px;
     }
 }
