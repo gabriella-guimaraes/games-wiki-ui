@@ -4,16 +4,12 @@ import { Button, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import galaxy from "../../../assets/milkyway.png"
 import { Link } from 'react-router-dom';
+import SectionTitle from '../../atoms/sectionTitle/SectionTitle';
 
 function Intro() {
   return (
     <section>
-        <Grid container alignItems="center" justifyContent="space-evenly">
-            <Grid size={{ xs: 12, md: 3 }}>
-                <Typography variant="h1" align='left' sx={{ fontStyle: "italic"}} className={styles.title}>Intro</Typography>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 12, md: 9 }} className={styles.divider}></Grid>
-        </Grid>
+        <SectionTitle text="Intro" />
         <Grid container alignItems="center" justifyContent="space-between" spacing={4} className={styles.Intro}>
             <Grid size={{ xs: 12, md: 7 }} className={styles.text}>
                 <Grid container>

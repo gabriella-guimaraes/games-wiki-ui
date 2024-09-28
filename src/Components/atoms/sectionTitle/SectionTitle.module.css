@@ -1,0 +1,20 @@
+.divider {
+    height: 1px;
+    background-color: var(--gray);
+}
+
+.title {
+    padding-top: 3rem;
+    padding-left: 6rem;
+}
+
+@media (max-width: 900px) {
+    .title {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .divider {
+        margin-bottom: 3rem;
+    }
+}
