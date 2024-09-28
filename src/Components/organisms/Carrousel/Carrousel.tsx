@@ -3,8 +3,22 @@ import styles from "./Carrousel.module.css";
 import Carousel from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CharacterCard from "../../molecules/CharacterCard/CharacterCard";
 
-function Carrousel() {
+interface CardData {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    icon?: React.ReactNode;
+  }
+  
+  interface CarouselCardProps {
+    cards: CardData[];
+  }
+
+function Carrousel({ cards }: CarouselCardProps) {
+    console.log("As informações chegaram aqui", cards.map(img => img.image))
   const settings = {
     dots: true,
     infinite: true,
@@ -29,14 +43,18 @@ function Carrousel() {
 
   return (
     <section className={styles.carrousel}>
-      <Carousel {...settings}>
-        <div className={styles.slide}>Card comes here</div>
-        <div className={styles.slide}>Card comes here</div>
-        <div className={styles.slide}>Card comes here</div>
-        <div className={styles.slide}>Card comes here</div>
-        <div className={styles.slide}>Card comes here</div>
-        <div className={styles.slide}>Card comes here</div>
-      </Carousel>
+            <Carousel {...settings}>
+                {cards.map((card) => (
+                    <div key={card.id} className={styles.card}>
+                        <CharacterCard
+                            name={card.name}
+                            description={card.description}
+                            image={card.image}
+                            icon={card.icon}
+                        />
+                    </div>
+                ))}
+            </Carousel>
     </section>
   );
 }

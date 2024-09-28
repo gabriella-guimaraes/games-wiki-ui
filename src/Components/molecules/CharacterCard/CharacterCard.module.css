@@ -1,0 +1,28 @@
+.img {
+    width: 80px;
+    height: auto;
+    align-self: center;
+    display: inline-block !important;
+    margin: 0;
+}
+
+.CharacterCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    min-height: 250px;
+    width: 300px;
+    background: linear-gradient(to right, var(--blue), var(--purple), var(--pink));
+}
+
+.Card {
+    /* width: 100%; */
+    margin: -10px -10px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--bg-dark);
+}
