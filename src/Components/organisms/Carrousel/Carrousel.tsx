@@ -18,7 +18,6 @@ interface CardData {
   }
 
 function Carrousel({ cards }: CarouselCardProps) {
-    console.log("As informações chegaram aqui", cards.map(img => img.image))
   const settings = {
     dots: true,
     infinite: true,
