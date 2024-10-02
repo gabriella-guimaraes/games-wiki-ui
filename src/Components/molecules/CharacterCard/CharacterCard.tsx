@@ -11,7 +11,6 @@ interface CharacterCardProps {
 }
 
 function CharacterCard({ name, description, image, icon}: CharacterCardProps) {
-    console.log("será que chegou?" + image,)
   return (
     <section className={styles.CharacterCard}>
         <Grid container alignItems="center" alignContent="center" justifyContent="center" spacing={1} className={styles.Card}>
