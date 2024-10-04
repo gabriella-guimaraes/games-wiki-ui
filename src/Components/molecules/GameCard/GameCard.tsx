@@ -16,7 +16,7 @@ interface GameCardProps {
 function GameCard({ id, title, platform, rating, poster }: GameCardProps) {
     // console.log(poster)
     //const posterUrl = `http://localhost:3000/${poster}`;
-    const detailUrl = `/api/game/:${id}`;
+    const detailUrl = `/games/${id}`;
     const cardStyle = {
         backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.494), rgba(32, 32, 32, 0.5)), url("${poster}")`,
         backgroundSize: 'cover',
