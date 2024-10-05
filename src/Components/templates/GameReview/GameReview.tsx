@@ -21,7 +21,7 @@ function GameReview({ game }: GameProps) {
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           {/* TODO: Transformar isso em um organism */}
-          <ReviewInfo date={game.createdAt} title={game.title} platform={game.platform} description={game.description} favCharacters={game.favCharacters} rating={game.rating} />
+          <ReviewInfo id={game._id} date={game.createdAt} title={game.title} platform={game.platform} description={game.description} favCharacters={game.favCharacters} rating={game.rating} />
         </Grid>
       </Grid>
     </section>

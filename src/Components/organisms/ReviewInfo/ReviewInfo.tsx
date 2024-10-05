@@ -7,8 +7,10 @@ import {
   Typography,
 } from "@mui/material";
 import CustomAccordion from '../../atoms/customAccordion/CustomAccordion';
+import DeleteBtn from '../../atoms/deleteBtn/DeleteBtn';
 
 interface ReviewInfoProps {
+    id: string;
     date: Date;
     title: string;
     platform: string;
@@ -17,14 +19,24 @@ interface ReviewInfoProps {
     rating: number;
 }
 
-function ReviewInfo({ date, title, platform, description, favCharacters, rating }: ReviewInfoProps) {
+function ReviewInfo({ id, date, title, platform, description, favCharacters, rating }: ReviewInfoProps) {
   return (
     <section className={styles.ReviewInfo}>
-        <Grid container alignItems="center" spacing={3}>
-            <Grid size={6}>
+        <Grid container alignItems="center" justifyContent="space-between" spacing={3}>
+            <Grid size={4}>
               <Typography variant="subtitle1" gutterBottom>
                 Created at: {new Date(date).toLocaleDateString()}
               </Typography>
+            </Grid>
+            <Grid size={8}>
+                <Grid container alignItems="center" justifyContent="flex-end" spacing={3}>
+                    <Grid size={6}>
+                        <DeleteBtn gameId={id} />
+                    </Grid>
+                    <Grid size={6}>
+                        <Button variant="outlined" color="primary">Edit</Button>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid size={12}>
               <Typography
@@ -48,15 +60,6 @@ function ReviewInfo({ date, title, platform, description, favCharacters, rating 
             </Grid>
             <Grid size={12}>
               <CustomAccordion title="Favorite Characters" content={favCharacters} />
-            </Grid>
-            {/* TODO: Transformar isso em uma molecule */}
-            <Grid size={6}>
-              {/* TODO: Transformar isso em um atom + personalização */}
-              <Button variant="outlined">Delete</Button>
-            </Grid>
-            <Grid size={6}>
-              {/* TODO: Transformar isso em um atom + personalização */}
-              <Button variant="outlined">Edit</Button>
             </Grid>
           </Grid>
     </section>
