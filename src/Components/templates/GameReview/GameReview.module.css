@@ -1,7 +1,19 @@
 .img {
     width: 95%;
-    height: 100vh;
+    height: 110vh;
     border-right: 1px solid var(--gray);
     object-fit: cover;
     overflow: hidden;
+}
+
+@media (max-width: 850px) {
+    .img {
+        width: 100%;
+        flex-grow: 2;
+        height: 50vh;
+        border-right: none;
+        border-radius: 0px 0px 30px 30px;
+        margin-bottom: 1rem;
+    }
+ 
 }

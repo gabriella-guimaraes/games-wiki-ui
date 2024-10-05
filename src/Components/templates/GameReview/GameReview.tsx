@@ -16,7 +16,6 @@ function GameReview({ game }: GameProps) {
         justifyContent="space-evenly"
         className={styles.content}
       >
-        <Grid size={12} className={styles.divider}></Grid>
         <Grid size={{ xs: 12, md: 6 }} className={styles.imgWrapper}>
           <img src={game.poster} alt={game.title} className={styles.img} />
         </Grid>
