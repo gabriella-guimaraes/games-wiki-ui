@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from "./ReviewInfo.module.css";
 import Grid from "@mui/material/Grid2";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Button,
   Rating,
   Typography,
 } from "@mui/material";
+import CustomAccordion from '../../atoms/customAccordion/CustomAccordion';
 
 interface ReviewInfoProps {
     date: Date;
@@ -48,22 +45,7 @@ function ReviewInfo({ date, title, platform, description, favCharacters, rating 
             </Grid>
             {/* TODO: Transformar isso em um atom + personalização  */}
             <Grid size={12}>
-              <Accordion style={{ width: "100%" }}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                  Favorite Characters
-                </AccordionSummary>
-                <AccordionDetails>
-                  {favCharacters.map((character) => (
-                    <Typography variant="body2" key={character}>
-                      {character}
-                    </Typography>
-                  ))}
-                </AccordionDetails>
-              </Accordion>
+              <CustomAccordion title="Favorite Characters" content={favCharacters} />
             </Grid>
             <Grid size={12}>
               {/* TODO: Transformar isso em um molecule */}
