@@ -2,12 +2,12 @@ import React from 'react';
 import styles from "./ReviewInfo.module.css";
 import Grid from "@mui/material/Grid2";
 import {
-  Button,
   Rating,
   Typography,
 } from "@mui/material";
 import CustomAccordion from '../../atoms/customAccordion/CustomAccordion';
 import DeleteBtn from '../../atoms/deleteBtn/DeleteBtn';
+import EditBtn from '../../atoms/editBtn/EditBtn';
 
 interface ReviewInfoProps {
     id: string;
@@ -34,7 +34,7 @@ function ReviewInfo({ id, date, title, platform, description, favCharacters, rat
                         <DeleteBtn gameId={id} />
                     </Grid>
                     <Grid size={6}>
-                        <Button variant="outlined" color="primary">Edit</Button>
+                        <EditBtn gameId={id} />
                     </Grid>
                 </Grid>
             </Grid>

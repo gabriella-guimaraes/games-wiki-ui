@@ -8,6 +8,7 @@ import Gallery from './Components/pages/gallery/Gallery';
 import AddReview from './Components/pages/addReview/addReview';
 import NotFound from './Components/pages/notFound/NotFound';
 import GameDetails from './Components/pages/gameDetails/GameDetails';
+import EditReview from './Components/pages/editReview/EditReview';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/addReview" element={<AddReview />} />
         <Route path="/games/:id" element={<GameDetails />} />
+        <Route path="/editReview/:id" element={<EditReview />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
