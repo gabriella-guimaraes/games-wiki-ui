@@ -1,0 +1,13 @@
+.Form {
+    padding: 6rem 3rem;
+    color: var(--text-light);
+}
+
+.MuiFormHelperText-root {
+    color: var(--text-light);
+}
+
+.editBtn {
+    width: 100%;
+    margin-top: 20px;
+}
